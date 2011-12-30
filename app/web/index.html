@@ -24,15 +24,34 @@
 <body>
     <div class="container">
         <div class="sixteen columns">
-            <header>
-                <h1>Citizen Tyler</h1>
-                <hr />
-            </header>
-            
             <div id="content">
                 <section id="home" class="page">
-                    You found me.
-                    <a id="view-about" class="button">About</a>
+                    <div class="sixteen columns spacer">
+                    </div>
+                    <div class="sixteen columns clearfix">
+                        <h2>I want to...</h2>
+                    </div>
+                    <div class="five columns alpha clearfix">
+                        <h1><a href="#vote">Vote</a></h1>
+                    </div>
+                    <div class="eleven columns omega">
+                        <h1><a href="#contact">Contact my Elected Representative</a></h1>
+                    </div>
+                    <a id="view-about">About this site</a>
+                </section>
+
+                <section id="vote" class="page">
+                    <div class="sixteen columns">
+                        Vote page
+                        <a class="button close">&laquo; Back to home</a>
+                    </div>
+                </section>
+
+                <section id="contact" class="page">
+                    <div class="sixteen columns">
+                        Contact page
+                        <a class="button close">&laquo; Back to home</a>
+                    </div>
                 </section>
 
                 <section id="about" class="page">
@@ -42,17 +61,11 @@
                     <p>This application has been neither reviewed nor endorsed by any government official.</p>
                     <a class="button close">&laquo; Back to home</a>
                 </section>
-
-                <footer>
-                    <div class="credits">A <a href="http://hacktyler.com/">Hack Tyler</a> project.</div>
-                </footer>
             </div>
         </div>
     </div>
 
-
-    <script type="text/template" id="stop-list-item-template"> 
-        <li id="stop-<%= order %>" class="stop"><%= name %><% if (transfer_to != "") { %><br /><span class="transfer">Transfer to <%= transfer_to %></span><% } %></li>
+    <script type="text/template" id="example-template"> 
     </script> 
 
     <script type="text/javascript" src="js/lib/jquery-1.7.1.min.js"></script> 
