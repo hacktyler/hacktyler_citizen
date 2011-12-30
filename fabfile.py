@@ -1,14 +1,11 @@
+#!/usr/bin/env python
+
 from fabric.api import *
 
 """
 Base configuration
 """
-#name of the deployed site if different from the name of the project
-env.site_name = 'citizen'
-
 env.project_name = 'citizen'
-env.site_media_prefix = "site_media"
-env.admin_media_prefix = "admin_media"
 env.repository_url = "git@github.com:hacktyler/hacktyler_citizen.git"
 env.phonegap_repo = "git@git.phonegap.com:onyxfish/59359_HackTylerCitizen.git"
 
@@ -32,27 +29,6 @@ def staging():
     env.app_s3_bucket = 'citizen-beta.hacktyler.com'
     
 """
-Branches
-"""
-def stable():
-    """
-    Work on stable branch.
-    """
-    env.branch = 'stable'
-
-def master():
-    """
-    Work on development branch.
-    """
-    env.branch = 'master'
-
-def branch(branch_name):
-    """
-    Work on any specified branch.
-    """
-    env.branch = branch_name
-    
-"""
 Commands - deployment
 """   
 def deploy_phonegap():
@@ -66,7 +42,7 @@ def gzip_assets():
     """
     local('python gzip_assets.py')
 
-def deploy_s3():
+def deploy():
     """
     Deploy the latest project site media to S3.
     """
