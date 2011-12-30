@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Citizen Tyler</title>
+    <meta name="description" content="Civic engagement in Tyler and Smith County.">
+	<meta name="author" content="Hack Tyler, Christopher Groskopf (@onyxfish)">
+
+    <!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/citizen.css">
+    
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" 
+</head>
+<body>
+    <div id="not-footer">
+        <div id="container">
+            <header>
+                <h1>Citizen Tyler</h1>
+                <hr />
+            </header>
+            
+            <div id="content">
+                <section id="home" class="page">
+                    <a id="find-a-stop" class="button">Find a stop</a><br />
+                    <a id="view-favorites" class="button">My favorites</a><br />
+                    <a id="view-map" class="button">Transit map</a><br />
+                    <a id="view-about" class="button">About</a>
+                </section>
+
+                <section id="about" class="page">
+                    <a class="button close">&laquo; Back to home</a>
+                    <p>Tyler On Time is an unofficial application for keeping track of the bus schedule in Tyler, Texas. It was created by <a href="http://twitter.com/onyxfish">Christopher Groskopf</a> as part of the <a href="http://hacktyler.com">Hack Tyler</a> project.</p>
+                    <p>Everything about this application is <a href="http://en.wikipedia.org/wiki/Open_source">open source</a>. All code, data, and documentation used in its production are freely available for modification and reuse under the terms of the permissive <a href="http://www.opensource.org/licenses/mit-license.php">MIT license</a>. The source code repository is hosted on <a href="https://github.com/hacktyler/hacktyler-transit">Github</a>, where you can also <a href="https://github.com/hacktyler/hacktyler-transit/issues">report any issues</a>.</p>
+                    <p>Development of Tyler On Time would not have been possible without the incalculable generosity of the open source community. It is particularly indebted to the developers of <a href="http://www.gdal.org/">GDAL</a>, <a href="http://jquery.com/">jQuery</a>, <a href="http://www.python.org/">Python</a>, <a href="http://www.getskeleton.com/">Skeleton</a>, <a href="https://github.com/marcuswestin/store.js">store.js</a>, <a href="http://tilemill.com/">TileMill</a> and <a href="http://documentcloud.github.com/underscore/">Underscore.js</a>, </p>
+                    <p>This application was was neither developed nor endorsed by the dedicated public servants who keep the buses running at <a href="http://www.cityoftyler.org/TylerTransit/tabid/104/Default.aspx">Tyler Transit</a>.</p>
+                    <a class="button close">&laquo; Back to home</a>
+                </section>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="credits">A <a href="http://hacktyler.com/">Hack Tyler</a> project.</div>
+    </footer>
+
+    <script type="text/template" id="stop-list-item-template"> 
+        <li id="stop-<%= order %>" class="stop"><%= name %><% if (transfer_to != "") { %><br /><span class="transfer">Transfer to <%= transfer_to %></span><% } %></li>
+    </script> 
+
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script> 
+    <script type="text/javascript" src="js/underscore-min.js"></script>
+    <script type="text/javascript" src="js/store.min.js"></script> 
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript" src="js/citizen.js"></script>
+</body>
+</html>
